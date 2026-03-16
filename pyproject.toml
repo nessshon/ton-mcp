@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=80"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ton-mcp"
+description = "MCP server for The Open Network — interact with TON blockchain via AI."
+requires-python = ">=3.10,<3.15"
+authors = [
+    { name = "nessshon" },
+]
+maintainers = [
+    { name = "nessshon" },
+]
+dependencies = [
+    "fastmcp>=3.0,<4.0",
+    "tonutils==2.0.4",
+]
+keywords = [
+    "AI",
+    "AsyncIO",
+    "MCP",
+    "Model Context Protocol",
+    "TON",
+    "TON blockchain",
+    "The Open Network",
+    "blockchain",
+    "crypto",
+    "smart contracts",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dynamic = ["version"]
+readme = "README.md"
+license = "MIT"
+
+[project.scripts]
+ton-mcp = "ton_mcp.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/nessshon/ton-mcp/"
+
+[tool.setuptools.packages.find]
+include = ["ton_mcp", "ton_mcp.*"]
+
+[tool.setuptools.package-data]
+ton_mcp = ["py.typed", "instructions.md"]
+
+[tool.setuptools.dynamic]
+version = { attr = "ton_mcp.__version__" }
+
+[tool.mypy]
+python_version = "3.10"
+follow_imports = "skip"
+ignore_missing_imports = true
