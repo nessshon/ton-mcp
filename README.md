@@ -1,4 +1,4 @@
-# TON MCP
+# 📦 TON MCP
 
 [![TON](https://img.shields.io/badge/TON-grey?logo=TON&logoColor=40AEF0)](https://ton.org)
 ![Python Versions](https://img.shields.io/badge/Python-3.10%20--%203.14-black?color=FFE873&labelColor=3776AB)
@@ -8,16 +8,20 @@
 
 ![Image](assets/banner.png)
 
+![Downloads](https://pepy.tech/badge/ton-mcp)
+![Downloads](https://pepy.tech/badge/ton-mcp/month)
+![Downloads](https://pepy.tech/badge/ton-mcp/week)
+
 ### MCP Server for [The Open Network](https://ton.org)
 
-Interact with the TON blockchain via AI assistants. Built on [Tonutils](https://github.com/nessshon/tonutils)
-and [FastMCP](https://github.com/jlowin/fastmcp).
+Interact with the TON blockchain via AI assistants.
+Built on [Tonutils](https://github.com/nessshon/tonutils) and [FastMCP](https://github.com/jlowin/fastmcp).
 
 > **Alpha version** — the project is under active development. APIs, tool names, and behavior
 > may change in future releases. It is strongly recommended to test all operations on **testnet**
 > before using on mainnet.
 
-## Features
+**Features**
 
 - **Providers** — Lite Servers (ADNL), Toncenter & TonAPI (HTTP)
 - **Networks** — mainnet, testnet, L2 (Tetra); auto tool filtering
@@ -142,23 +146,23 @@ uv sync
 
 ### Parameters
 
-| Parameter                 | Default                                                                                                 | Description                                                                |
-|---------------------------|---------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| `NETWORK`                 | `testnet`                                                                                               | `mainnet`, `testnet`, `tetra`                                              |
-| `EXPLORER`                | `tonviewer`                                                                                             | `tonviewer`, `tonscan`                                                     |
-| `WALLET_VERSION`          | `v5r1`                                                                                                  | `v5r1`, `v4r2`, `v4r1`, `v3r2`, `v3r1`, `highload_v3r1`, `preprocessed_v2` |
-| `WALLET_SECRET`           | —                                                                                                       | Mnemonic (space-separated) or private key (hex/base64)                     |
-| `CLIENT_PROVIDER`         | —                                                                                                       | `lite`, `toncenter`, `tonapi`                                              |
-| `CLIENT_API_KEY`          | —                                                                                                       | API key (required for `tonapi`, optional for `toncenter`)                  |
-| `CLIENT_LITE_CONFIG`      | —                                                                                                       | Lite client config path or URL                                             |
-| `CLIENT_RPS_LIMIT`        | `10`                                                                                                    | Requests per second limit                                                  |
-| `CLIENT_RPS_PERIOD`       | `1.0`                                                                                                   | Rate limit window in seconds                                               |
-| `TONCONNECT_MANIFEST_URL` | [manifest.json](https://raw.githubusercontent.com/nessshon/ton-mcp/main/assets/tonconnect-manifest.json) | TonConnect manifest URL                                                    |
-| `TONCONNECT_STORAGE_PATH` | `./tonconnect-storage.json`                                                                             | TonConnect session storage path                                            |
-| `TONCONNECT_APP_DOMAINS`  | `["github.com"]`                                                                                        | Domains for TonProof verification                                          |
+| Parameter                 | Default                                                                                                  | Description                                                                |
+|---------------------------|----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| `NETWORK`                 | `testnet`                                                                                                | `mainnet`, `testnet`, `tetra`                                              |
+| `EXPLORER`                | `tonviewer`                                                                                              | `tonviewer`, `tonscan`                                                     |
+| `WALLET_VERSION`          | `v5r1`                                                                                                   | `v5r1`, `v4r2`, `v4r1`, `v3r2`, `v3r1`, `highload_v3r1`, `preprocessed_v2` |
+| `WALLET_SECRET`           | —                                                                                                        | Mnemonic (space-separated) or private key (hex/base64)                     |
+| `CLIENT_PROVIDER`         | —                                                                                                        | `lite`, `toncenter`, `tonapi`                                              |
+| `CLIENT_API_KEY`          | —                                                                                                        | API key (required for `tonapi`, optional for `toncenter`)                  |
+| `CLIENT_LITE_CONFIG`      | —                                                                                                        | Lite client config path or URL                                             |
+| `CLIENT_RPS_LIMIT`        | `10`                                                                                                     | Requests per second limit                                                  |
+| `CLIENT_RPS_PERIOD`       | `1.0`                                                                                                    | Rate limit window in seconds                                               |
+| `TONCONNECT_MANIFEST_URL` | [manifest.json](https://raw.githubusercontent.com/nessshon/ton-mcp/main/assets/tonconnect-manifest.json) | Ton Connect manifest URL                                                   |
+| `TONCONNECT_STORAGE_PATH` | `./tonconnect-storage.json`                                                                              | Ton Connect session storage path                                           |
+| `TONCONNECT_APP_DOMAINS`  | `["github.com"]`                                                                                         | Domains for TonProof verification                                          |
 | `TONCONNECT_SECRET`       | `ton-mcp-secret`                                                                                         | Secret for TonProof HMAC signing                                           |
-| `MCP_SERVER_HOST`         | `127.0.0.1`                                                                                             | Server host (HTTP transport only)                                          |
-| `MCP_SERVER_PORT`         | `0`                                                                                                     | Server port; `0` = auto-select (HTTP transport only)                       |
+| `MCP_SERVER_HOST`         | `127.0.0.1`                                                                                              | Server host (HTTP transport only)                                          |
+| `MCP_SERVER_PORT`         | `0`                                                                                                      | Server port; `0` = auto-select (HTTP transport only)                       |
 
 ## See Also
 
