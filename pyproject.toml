@@ -51,6 +51,7 @@ ton-mcp = "ton_mcp.__main__:main"
 
 [project.urls]
 Homepage = "https://github.com/nessshon/ton-mcp/"
+Examples = "https://github.com/nessshon/ton-mcp/#examples"
 
 [tool.setuptools.packages.find]
 include = ["ton_mcp", "ton_mcp.*"]
@@ -59,7 +60,7 @@ include = ["ton_mcp", "ton_mcp.*"]
 ton_mcp = ["py.typed", "instructions.md"]
 
 [tool.setuptools.dynamic]
-version = { attr = "ton_mcp.__version__" }
+version = { attr = "ton_mcp.__init__.__version__" }
 
 [tool.mypy]
 python_version = "3.10"
